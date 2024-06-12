@@ -1,0 +1,34 @@
+{
+  "name": "chatgpt-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Penut Chen",
+  "license": "MIT",
+  "description": "ChatGPT App",
+  "build": {
+    "appId": "com.example.chatgpt-electron",
+    "asar": true,
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "extraResources": [
+      {
+        "from": "node_modules",
+        "to": "resources/node_modules",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^30.0.9",
+    "electron-builder": "^25.0.0-alpha.9"
+  }
+}
